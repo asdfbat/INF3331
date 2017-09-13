@@ -24,6 +24,8 @@ echo $x    # prints 6
 # Specific declaration type:
 declare -i x=5
 
+# An important thing to remember about bash is that it doesnt consider i.e. x to be a variable (except when declared) unless you call it as $x. Otherwise it will just be a string x or something.
+
 
 ### Parsing command-line arguments:
 # With the files comes a list of parser arguments [1, 2, 3, 4]... (ignores 0, the filename).
