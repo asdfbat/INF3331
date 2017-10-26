@@ -50,9 +50,6 @@ $     End of line
 # If you DO NOT wish to use a group for referencing later, add ?:, as shown below
 (?:[0-5][A-D])
 
-## OR | ##
-([0-5]|[A-D])  # 0-5 OR A-D (would be equivalent to [0-5A-D])
-
 
 
 ### Quantifiers ###
@@ -66,3 +63,13 @@ $     End of line
 {,n}         'n' or less
 {n,m}        'n', 'm' or in between
 -----------  ----------------------
+
+# The non-greed operator:
+# When ? is placed after a quantifier (i.e. +?) it acts as the "non-greed" operator.
+# This operator makes the character set match the SHORTEST possible match, instead of the LONGEST.
+
+
+
+### OR | ###
+([0-5]|[A-D])  # 0-5 OR A-D (would be equivalent to [0-5A-D])
+# Ordering matters! If it matches several of the OR alternatives, it will default to the first one.
