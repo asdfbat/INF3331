@@ -1,0 +1,80 @@
+<!DOCTYPE html>    <!--Beings with a doctype and HTML tag.-->
+<html>
+
+<head> <!-- The header contains meta-information about the document. -->
+    <title> this is a title </title>
+</head>
+
+<body> <!-- Body contains the content of the document. -->
+    <h1> This is a header </h1>
+    <h2> This is a subheader </h2>
+    <p> This is a paragagraph </p>
+    This is just random text <br>    <!-- HTML won't linebreak without this tag -->
+    with a line-break <br>
+    This text is <i> italic </i> and this is <b> bold </b> <br>
+
+    This is a <a href="https://www.github.com"> link </a> <br>
+
+    This is an image <br>
+    <img src="fig/picture.jpg"> </img> <br>
+
+    This is a table <br>
+        <table>
+            <tr>    <!-- New row -->
+                <th>Name</th>    <!-- Header column entry. -->
+                <th>Course</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>Peter</td>    <!-- Ordinary column entry. -->
+                <td>INF3331</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>George</td>
+                <td>INF4331</td>
+                <td>94</td>
+            </tr>
+        </table>
+
+
+    <!-- ### STYLING ###
+        Most tags have a set of style parameters
+        that may be set. A few examples: -->
+        <p style="color:blue; background-color:rgb(255,0,255);"> This is a colorful paragraph </p> <br>
+
+        <img src="fig/picture.jpg" alt="image text" style="width:150px; height:150px;"> </img> <br>
+
+
+    <!-- ### USER INPUT ###-->
+    <!-- > type:
+            * text = textbox.
+            * password = textbox with hidden characters.
+            * radio = 'pick one'-buttons.
+            * submit = submit form button.
+        > name = ?
+        > value = value of input. -->
+    <form>
+        Gender: <br>
+        <input type="radio" name="gender" value="male" checked> Male <br>    <!-- Defined as pre-checked -->
+        <input type="radio" name="gender" value="female"> Female <br>
+        Username: <br>
+        <input type="text" name="user_name"> <br>
+        Password: <br>
+        <input type="password" name="user_password"> <br>
+        <input type="submit" name="submit_button" value="Submit"> <br>
+    </form>
+
+    <!-- > action = something to be done with the input.
+         > method = GET request to google.com. -->
+    <form action="https://www.google.com/search" method="GET">
+        Google search:<br>
+        <input type="text" name="q" value="Search me"> <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,12 @@
+<!-- Flask uses HTML, augmented with support for more advanced modifications -->
+
+<!-- Here, we can get flask to replace "name" with something specified,
+    or do something else if there is no name provided. -->
+
+<!doctype html>
+<title> Hello from flask </title>
+{% if name %}    <!-- Flask if-test, checking if name exists. -->
+    <h1> You are at {{ name }} </h1>    <!-- Inserting varaible name here. -->
+{% else %}
+    <h1> No name found! </h1>
+{% endif %}
