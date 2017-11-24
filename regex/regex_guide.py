@@ -7,6 +7,7 @@ regex = r"asdf" # Use the r (raw) in fron of the string to tell python the strin
 
 ### Finding stuff ###
 matches = re.findall(regex, s)  # Returns a list of all mathces in string
+                                # If the regex contains capture-groups, those will be returned instead.
 
 ### Substituting ###
 new_s = re.sub(regex, "x", s)  # Returns a new string with all matching values substituted

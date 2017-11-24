@@ -7,19 +7,19 @@
 
 ### Character Classes [ ] ###
 # Setting up the rules for how a character is allowed to look.
-[ABC]      # May contain A, B or C.
-[AB][12]   # May contain A1, B1, A2 or B2.
+[ABC]      May contain A, B or C.
+[AB][12]   May contain A1, B1, A2 or B2.
 
 ## Ranges ##
-[A-E]       # May contain A through E
-[a-e]       # May contain a through e
-[2-4]       # May contain 2 through 4
-[a-zA-Z0-9] # May contain a-z, A-Z or 0-9.
+[A-E]       May contain A through E
+[a-e]       May contain a through e
+[2-4]       May contain 2 through 4
+[a-zA-Z0-9] May contain a-z, A-Z or 0-9.
 
 ## Character specification ##
 .   any character
-\w  a word letter
-\W  not a word letter
+\w  alphanumerical
+\W  not alphanumerical
 \d  a digit
 \D  not a digit
 \s  a space
@@ -27,10 +27,13 @@
 \n  new line
 \t  tabular
 
+## Additional commands ##
+^   not. Example: Capturing everything but a, b or c: [^abc]
+
 ## Anchors ##
 # Added to a character class to specify location
 ---   ------------------
-^     Beginning of line
+^     Beginning of line (when outside character class)
 $     End of line
 \b    Boundary of a word
 \B    Not a boundary
