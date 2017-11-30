@@ -1,0 +1,109 @@
+\documentclass[a4paper]{article}
+
+% Import some useful packages
+\usepackage[margin=0.5in]{geometry} % narrow margins
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\definecolor{LightGray}{gray}{0.95}
+
+\title{Peer-review of assignment 4 for \textit{INF3331-jonassl}}
+\author{Christian Bjørland, chrbjorl, {chrbjorl@uio.no} \\
+ 		Thomas Lundby Heggland, thl, {thl@uio.no} \\
+		Per Kulseth Dahl, perkda, {perkda@uio.no}}
+
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\subsection{Goal}
+The review should provide feedback on the solution to the student. The main goal is to \emph{give constructive feedback and advice} on how to improve the solution. You, the peer-review team, can decide how you organise the peer-review work between you. 
+
+\subsection{Guidelines}\label{sec:general_review}
+For each (coding) exercise, one should review the following points:
+
+\begin{itemize}
+  \item Is the code \textbf{working as expected}? For non-internal functions (in particular for scripts that are run from the command-line), does the program handle invalid inputs sensibly?
+  \item Is the code \textbf{well documented}? Are there docstrings and are the useful?
+  \item Is the code written in \textbf{Pythonic way} \footnote{https://www.python.org/dev/peps/pep-0020/}? Is the code easy to read? Are the variable/class/function names sensible? Do you find overuse of classes or not sufficient use of functions or classes? Are there parts of the program that are hard to understand? 
+  \item Can you find \textbf{unnecessarily complicated parts} of the program? If so, suggest an improved implementation.
+  \item List the programming parts that are not answered.
+\end{itemize}
+Use (shortened) code snippets where appropriate to show how to improve the solution. 
+
+\subsection{Points}
+The review is completed by pushing the review Latex source file (.tex files) and the PDF files to each of the reviewed repositories. The name of the files should be \emph{feedback.tex} and \emph{feedback.pdf} in the students assignemnt4 directory.
+
+You will get up to 10 points for delivering the peer-reviews. Each of you should contribute to the review roughly equivalently - your team will get the same number of points\footnote{In case a team-member does not contribute, please email \href{mailto:simon@simula.no}{simon@simula.no}}. 
+
+
+
+\section{Review \emph{- to be filled out}}\label{sec:review}
+
+System used for the review: Archlinux, Python version 3.6.2.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{General feedback}
+Use this section to give general feedback about the solution such as advice for improved programming or documentation style.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.1}
+Should unittest or equivalent library. If using print statements in tests you should make some verbosity control to ensure not spamming the output. Maybe add statement that explains what went wrong when an assert fails. Tests are readable.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.2} \label{sec:assignment5.2}
+Looks good. It is good practice to write docstrings though we agree that it is probably not necessary for such a small task.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.3}
+% Add a review based on section \ref{sec:general_review}. In addition, review the following assignment specific items: 
+% \begin{itemize}
+%   \item Is numpy beinused effectively (e.i. vectorization where possible)?
+% \end{itemize}
+In general imports should be done at the top of a file as specified in the import section of the PEP8 standard. 
+For the report it is incorrect to reach the conclusion reached from only a single datapoint. You should either specify the test case or include more datapoints.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.4}
+% Add a review based on section \ref{sec:general_review}.
+% ction
+We think this is very good except as previously mentioned docstrings should be included.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.5} 
+We think this is very good except as previously mentioned docstrings should be included, missing report.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.6}
+We think this is very good except as previously mentioned docstrings should be included. Easily readable. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.7}
+Not completed
+
+\subsection*{Assignment 4.8}
+We think this is very good.
+
+
+% \subsection{Useful Latex snippets}
+% Here are some sample usage of Latex.
+
+% \subsubsection{Sample code}
+% \begin{minted}[bgcolor=LightGray, linenos, fontsize=\footnotesize]{python}
+% import sys
+% print "This is a sample code"
+% sys.exit(0)
+% \end{minted}
+
+% \subsubsection{Mathematical equation}
+% \begin{align}
+% 2 \pi > 6
+% \end{align}
+
+
+
+\bibliographystyle{plain}
+\bibliography{literature}
+
+\end{document}
